@@ -88,3 +88,12 @@ costs of `div`, `sqrt`, `pow` and transcendentals differ from 1 — the keyword 
   counts (and bandwidth) of the *compiled* code from the CPU's performance monitoring units, so
   it sees BLAS and concrete-type code but counts what executed after CSE/FMA contraction. The two
   numbers differ by construction; comparing them is a useful compiler-efficiency check.
+
+## Provenance
+
+This package was written with the help of [Claude Code](https://claude.com/claude-code) and was
+developed and tested against the needs of
+[ElectronDynamicsModels.jl](https://github.com/SebastianM-C/ElectronDynamicsModels.jl), where it
+started as an in-repo sub-package. Design decisions, validation on real hardware and the
+measurements quoted above are the maintainer's; expect rough edges outside the paths that
+project exercises.
