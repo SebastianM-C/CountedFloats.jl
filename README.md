@@ -84,3 +84,7 @@ costs of `div`, `sqrt`, `pow` and transcendentals differ from 1 — the keyword 
 - [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)'s `Dual` and
   [Measurements.jl](https://github.com/JuliaPhysics/Measurements.jl) — the same "wrapper `<: Real`"
   pattern this package relies on; `Counted{Dual{…}}` composes with them.
+- [LIKWID.jl](https://github.com/JuliaPerf/LIKWID.jl) — the hardware-counter route: measured FLOP
+  counts (and bandwidth) of the *compiled* code from the CPU's performance monitoring units, so
+  it sees BLAS and concrete-type code but counts what executed after CSE/FMA contraction. The two
+  numbers differ by construction; comparing them is a useful compiler-efficiency check.
